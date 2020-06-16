@@ -8,4 +8,13 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+      .app-titile.navbar.navbar-expand-md.navbar-light.bg-light
+        .navbar-brand Railsアプリケーション作成テスト
+      .app-titile.navbar.navbar-expand-md.navbar-dark.bg-dark
+        .navbar-brand Github用に作成
+      .container
+        - if flash.notice.present?
+          .alert.alert-success= flash.notice
+        - if flash.alert.present?
+          .alert.alert-danger= flash.alert
+        = yield
