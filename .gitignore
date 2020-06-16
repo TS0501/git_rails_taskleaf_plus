@@ -34,3 +34,5 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+test/fixtures/tasks.yml
+test/models/task_test.rb
